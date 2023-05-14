@@ -44,7 +44,7 @@ header ul li a:hover {
   height: 100%;
 }
 
-.product-list article p ,
+.product-list article p,
 .product-list article h3 {
   padding-top: 5px;
   padding-bottom: 20px;
@@ -160,12 +160,20 @@ footer .center {
   justify-content: flex-start;
   gap: 100px;
 }
-.list div a {
-  display: flex;
-  padding-bottom: 20px;
+.list a {
   text-decoration: underline;
 }
-.list div a:hover {
+.list a:hover {
   color: #acdadc;
   border-color: #acdadc;
+}
+.sponsor ul {
+  display: flex;
+  padding-top: 20px;
+  gap: 5px;
+}
+
+.sponsor p,
+.sponsor a {
+  font-size: 20px;
 }
