@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+
+body {
+  overflow-x: hidden;
+}
+:root {
+  --red-500: #ff2020;
+}
+header {
+  padding: 0px 0px;
+  background-color: white;
+}
+.container {
+  width: 85%;
+  height: 100%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar {
+  display: flex;
+  column-gap: 36px;
+}
+.navbar > li {
+  padding: 40px 0px;
+}
+.navbar a {
+  font-size: 16px;
+  color: #141517;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.head-icon {
+  display: flex;
+  column-gap: 30px;
+  font-size: 18px;
+}
+.head-icon i,
+.navbar a {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.head-icon i:hover,
+.navbar a:hover {
+  color: var(--red-500);
+  transform: scale(1.2);
+}
+.dropdown-element {
+  position: relative;
+}
+.dropdown-element:hover .dropdown {
+  visibility: visible;
+}
+.dropdown {
+  min-width: 150px;
+  border-top: 2px solid var(--red-500);
+  border-radius: 10px 10px 4px 4px;
+  left: -25px;
+  padding: 20px 16px;
+  position: absolute;
+  top: 90px;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.banner-row img {
+  animation-name: move;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes move {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+header .dropdown::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  transform: translateY(-101%);
+
+  border: 10px solid transparent;
+  border-bottom-color: solid var(--red-500);
+}
+.status {
+  position: absolute;
+  top: 20px;
+  right: -50%;
+  padding: 4px 8px;
+  color: white;
+  background-color: var(--red-500);
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.banner {
+  height: 100vh;
+  background-color: #f0f0f2;
+  z-index: 10;
+}
+.banner-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner img {
+  height: 100%;
+}
+
+.banner-text p {
+  width: 70%;
+  padding: 40px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 300;
+  color: #0b1c39;
+  margin-top: 0px;
+  font-style: normal;
+
+  text-transform: normal;
+  font-size: 16px;
+}
+.banner-text h1 {
+  width: 80%;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 300;
+  color: #0b1c39;
+  margin-top: 0px;
+  font-style: normal;
+  font-weight: 400 italic;
+  text-transform: normal;
+  font-size: 96px;
+}
+.btn {
+  display: inline-block;
+  padding: 16px 24px;
+  text-transform: uppercase;
+  border: 1px solid;
+  background-color: #4a4a4b;
+  color: white;
+  font-weight: 500;
+  border-radius: 2px;
+  position: relative;
+  z-index: 1;
+}
+.btn::before {
+  content: "";
+  width: 0px;
+  top: 0px;
+  left: 0px;
+  height: 50px;
+  background-color: #ff2020;
+  position: absolute;
+  transform: scaleX(100px);
+  transition: 0.5s;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  z-index: 1;
+}
+.btn span {
+  position: relative;
+  z-index: 1;
+}
+.btn:hover::before {
+  width: 100%;
+}
+
+.arrival {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.product {
+  width: 100%;
+}
+.product-1 {
+  flex-direction: column;
+  padding-top: 200px;
+  padding-bottom: 170px;
+}
+.product-1 h2 {
+  width: 100%;
+
+  color: #000;
+  font-size: 48px;
+  font-weight: 700;
+  font-family: "Josefin Sans", sans-serif;
+  margin-bottom: 0.5rem;
+}
+.slogan {
+  padding-bottom: 50px;
+}
+.div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.div a {
+  padding-top: 20px;
+}
+.arrival span {
+  color: #ff2020;
+  font-size: 18px;
+  font-weight: 500;
+  display: block;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+}
+.arrival h3 {
+  color: #444444;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 12px;
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+}
+.arrival .product {
+  padding-top: 20px;
+}
+/* gallery */
+.gallery {
+  display: flex;
+  gap: 40px;
+}
+.high {
+  width: 50%;
+}
+.normal {
+  width: 24%;
+}
+.medium {
+  width: 24%;
+}
+.high img,
+.normal img {
+  width: 100%;
+  height: 600px;
+}
+.medium {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.medium img {
+  width: 100%;
+  height: 280px;
+}
+.image-pr {
+  overflow: hidden;
+}
+.arrival img:hover,
+.gallery img:hover {
+  animation-name: move;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes move {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+/* popular items */
+.popular {
+  padding-top: 200px;
+  padding-bottom: 170px;
+  padding-left: 370px;
+  padding-right: 370px;
+}
+.slogan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+.slogan h2 {
+  color: #000;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+}
+.slogan p {
+  color: #777;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: normal;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.popular-flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+.text {
+  padding-block: 20px;
+}
+.popular-clock {
+  width: calc(100% / 3 - 6px);
+}
+.popular-clock img {
+  width: 100%;
+}
+/* Card */
+.image {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 5px solid #ff2020;
+}
+.card a {
+  color: white;
+}
+.text {
+  z-index: 100;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -80px;
+  width: 100%;
+  height: 80px;
+  background-color: #ff2020;
+  border-radius: 2px;
+}
+.text {
+  z-index: 99;
+}
+.popular-clock:hover .card {
+  transform: translateY(0);
+  bottom: 0px;
+  transition: 0.5s;
+}
+
+.popular-clock span {
+  color: #ff2020;
+  font-size: 18px;
+  font-weight: 500;
+  display: block;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+}
+.popular-clock h3 {
+  color: #444444;
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 12px;
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.container {
+  padding: 0px 40px;
+}
